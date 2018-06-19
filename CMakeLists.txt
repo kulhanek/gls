@@ -31,14 +31,12 @@ ENDIF(NOT DEVELOPMENT_ROOT)
 # external/internal libraries --------------------------------------------------
 # ==============================================================================
 
+# GLEW -------------------------------------------
+FIND_PACKAGE(GLEW REQUIRED)
+INCLUDE_DIRECTORIES(${GLEW_INCLUDE_DIRS})
+
 # OpenGL -----------------------------------------
 FIND_PACKAGE(OpenGL REQUIRED)
-
-# GLEW -------------------------------------------
-SET(GLEW_ROOT ${DEVELOPMENT_ROOT}/thirdparty/glew/1.5.8/)
-INCLUDE_DIRECTORIES(${GLEW_ROOT}/include)
-LINK_DIRECTORIES(${GLEW_ROOT}/lib)
-SET(GLEW_LIB_NAME glew)
 
 # GLS --------------------------------------------
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include SYSTEM)
@@ -78,8 +76,8 @@ IF(NOT DEFINED COMPOSITE_PROJECT)
     SET(CMAKE_CXX_FLAGS_RELEASE "-O2")
     SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -Wall -Wundef -Wno-long-long")
 
-    #SET(CMAKE_BUILD_TYPE Release)
-    SET(CMAKE_BUILD_TYPE Debug)
+    SET(CMAKE_BUILD_TYPE Release)
+    #SET(CMAKE_BUILD_TYPE Debug)
 ENDIF(NOT DEFINED COMPOSITE_PROJECT)
 
 # ==============================================================================
