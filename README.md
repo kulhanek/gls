@@ -6,3 +6,4 @@ The libgls library allows stereoscopic rendering with OpenGL, without requiring 
 
 ## Dependencies
 * libglew-dev
+* OpenGL
