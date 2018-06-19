@@ -5,5 +5,5 @@ The libgls library allows stereoscopic rendering with OpenGL, without requiring 
 [https://gitlab.marlam.de/marlam/libgls](https://gitlab.marlam.de/marlam/libgls)
 
 ## Dependencies
-* libglew-dev
+* libglewmx-dev
 * OpenGL

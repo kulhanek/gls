@@ -34,6 +34,7 @@ ENDIF(NOT DEVELOPMENT_ROOT)
 # GLEW -------------------------------------------
 FIND_PACKAGE(GLEW REQUIRED)
 INCLUDE_DIRECTORIES(${GLEW_INCLUDE_DIRS})
+SET(GLEW_LIBRARY GLEWmx)
 
 # OpenGL -----------------------------------------
 FIND_PACKAGE(OpenGL REQUIRED)
